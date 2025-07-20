@@ -66,10 +66,6 @@ func ListUsers(c *gin.Context) {
     query = query.Where("LOWER(name) LIKE ? OR LOWER(email) LIKE ?", "%"+search+"%", "%"+search+"%")
   }
 
-  if email := c.Query("email"); email != "" {
-    query = query.Where("email = ?", normalizeEmail(email))
-  }
-
   page := 1
   perPage := 10
 
