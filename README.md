@@ -35,12 +35,17 @@ A REST API for managing users, licenses, and organizational plans built with Go,
 
 ### Query Parameters for `/users`
 
-```bash
+`
 GET /users?page=1&perPage=10&hasLicense=true&role=admin&search=john
-```
+`
 
 - `page` - Page number (default: 1)
 - `perPage` - Items per page (default: 10)
 - `hasLicense` - Filter by license status (true/false)
 - `role` - Filter by user role (admin/user)
 - `search` - Search in name and email fields
+
+### TODO
+ - Implement integration and unit tests
+ - Implement proper validations for user create
+ - Implement Swagger/OpenAPI documentation
